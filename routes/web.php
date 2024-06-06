@@ -19,3 +19,7 @@ Route::get('/index', function () {
 
 // Creating a route that wil handle the user note app
 Route::get('/noteapp', [NoteappController::class, 'shownote']);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
